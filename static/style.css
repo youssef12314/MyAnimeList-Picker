@@ -141,3 +141,12 @@ footer p::before {
     max-width: 300px;
     margin: 0 auto; 
 }
+
+h2 a {
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+h2 a:hover {
+    text-decoration: underline; 
+}

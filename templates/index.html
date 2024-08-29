@@ -16,13 +16,16 @@
     </form>
     <div class="anime-content">
     {% if random_anime_image_url %}
-    <img src="{{ random_anime_image_url }}" alt="{{ random_anime_title }} cover image" style="max-width:300px;">
-    <h2>{{ random_anime_title }}</h2>
+        <img src="{{ random_anime_image_url }}" alt="{{ random_anime_title }} cover image" style="max-width:300px;">
+        <h2>
+            <a href="{{ random_anime_url if random_anime_url else '#' }}" target="_blank">
+                {{ random_anime_title }}
+            </a>
+        </h2>
     {% elif error %}
         <p>{{ error }}</p>
     {% endif %}
-</div>
-
+    </div>
 </body>
 <footer>
     <p><a href="https://github.com/youssef12314" target="_blank">youssef12314</a></p>
