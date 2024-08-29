@@ -6,4 +6,4 @@ A simple web application that allows users to get a random anime from their MyAn
 - Built with Flask and deployed on Heroku
 
 # You can use it here:
-# [MyAnimeList Picker](https://secure-basin-74082-3d7994b2880d.herokuapp.com/get-random-anime)
+# [MyAnimeList Picker](https://secure-basin-74082-3d7994b2880d.herokuapp.com)
