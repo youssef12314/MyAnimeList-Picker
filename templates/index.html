@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Anime Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>MyAnimeList Picker</h1>
+    <p>Enter your MyAnimeList username to get a random anime from your plan to watch.</p>
+    <form action="/get-random-anime" method="POST">
+        <label for="username">MyAnimeList Username:</label>
+        <input type="text" id="username" name="username" required value="{{ username | default('') }}">
+        <button type="submit">Get Random Anime</button>
+    </form>
+    <div class="anime-content">
+    {% if random_anime_image_url %}
+    <img src="{{ random_anime_image_url }}" alt="{{ random_anime_title }} cover image" style="max-width:300px;">
+    <h2>{{ random_anime_title }}</h2>
+    {% elif error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</div>
+
+</body>
+<footer>
+    <p><a href="https://github.com/youssef12314" target="_blank">youssef12314</a></p>
+</footer>
+</html>
